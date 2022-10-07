@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @gabrielrealm08
-- 👀 I’m interested in ...
+- 👀 I’m interested in computers, games, techs and gadget!!
 - 🌱 I’m currently learning Artificial Intelligence..
-- 💞️ I’m looking to collaborate on ...
+- 💞️ I’m looking to collaborate on developing a game
 - 📫 How to reach me www.instagram.com/gabriel__realm...
 
 <!---
