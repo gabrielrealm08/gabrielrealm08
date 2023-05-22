@@ -2,7 +2,7 @@
 - 👀 I’m interested in computers, games, techs and gadget!!
 - 🌱 I’m currently learning Artificial Intelligence..
 - 💞️ I’m looking to collaborate on developing a game
-- 📫 How to reach me www.instagram.com/gabriel__realm...
+- 📫 How to reach me https://www.linkedin.com/in/gabriel-oyibo-913632231/...
 
 <!---
 gabrielrealm08/gabrielrealm08 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
