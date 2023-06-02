@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "55c1d976-ccf2-4b2c-99df-a60f0343eecd",
+		"name": "Open Gabriel Oyibo visualization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list of breweries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "728b018c-4b80-465c-adbf-4fa6374cc1e0",
+						"exec": [
+							"let template = `\r",
+							"    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\"\r",
+							"        crossorigin=\"anonymous\">\r",
+							"    <style type=\"text/css\">\r",
+							"        body { font-size: 12px; background: #eee; padding: 16px;}\r",
+							"        .card { border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,.15); -webkit-box-shadow: 0 4px 10px rgba(0,0,0,.15); -moz-box-shadow: 0 4px 10px rgba(0,0,0,.15);}\r",
+							"        .card-topper { border-top-right-radius: 8px; border-top-left-radius: 8px; padding: 8px 16px; font-size: 12px; font-weight: 600; text-transform: uppercase;}\r",
+							"        .card-topper.micro { background-color: #173F5F; color: #ffffff;}\r",
+							"        .card-topper.planning { background-color: #ED553B; color: #ffffff;}\r",
+							"        .card-topper.large { background-color: #ED553B; color: #ffffff;}\r",
+							"        .card-topper.brewpub { background-color: #20639B; color: #ffffff;}\r",
+							"        .card-topper.regional { background-color: #F6D55C;}\r",
+							"        .card-topper.contract { background-color: #3CAEA3; color: #ffffff;}\r",
+							"        .card-topper.proprietor { background-color: #ED553B; color: #ffffff;}\r",
+							"        .card-topper.bar { background-color: #ED553B; color: #ffffff;}\r",
+							"    </style>\r",
+							"    <div class=\"container-fluid\">\r",
+							"        <div class=\"row\">\r",
+							"            <div class=\"col mb-4\">\r",
+							"                <h1>Breweries</h1>\r",
+							"            </div>\r",
+							"        </div>\r",
+							"        <div class=\"row\">\r",
+							"            {{#each response}}\r",
+							"            <div class=\"col-sm-6 col-lg-4 col-xl-3 mb-5\">\r",
+							"                <div class=\"card\">\r",
+							"                    <div class=\"test card-topper card-img-top {{brewery_type}}\">{{brewery_type}}</div>\r",
+							"                    <div class=\"card-body\">\r",
+							"                        <h2>{{name}}</h2>\r",
+							"                        <address>{{street}}<br>{{city}}, {{state}} {{postal_code}}</address>\r",
+							"                        <a href=\"{{website_url}}\" class=\"card-link\" target=\"_blank\" rel=\"noopener noreferrer\">Website</a>\r",
+							"                        <a href=\"https://www.google.com/maps/search/?api=1&query={{name}} {{state}}\" class=\"card-link\" target=\"_blank\" rel=\"noopener noreferrer\">Map</a>\r",
+							"                    </div>\r",
+							"                </div>\r",
+							"            </div>\r",
+							"            {{/each}}\r",
+							"        </div>\r",
+							"    </div>\r",
+							"`;\r",
+							"\r",
+							"pm.visualizer.set(template, {\r",
+							"    response: JSON.parse(responseBody)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "382e175a-59b6-4c7e-8c84-df62372a80d7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.openbrewerydb.org/breweries"
+			},
+			"response": []
+		}
+	]
+}
